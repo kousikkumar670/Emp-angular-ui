@@ -1,0 +1,12 @@
+.side-nav-content{
+    background-color: white;
+    border:1px solid #ccc;
+    width: 60px;
+}
+.side-nav-default-width{
+    width: 60px;
+}
+.side-nav-lg-width{
+    width: 200px;
+    transition: width 0.1s;
+}

@@ -1,0 +1,9 @@
+<app-top-bar (sideNavToggleEvent)="navToggle($event)"></app-top-bar>
+<div class="flex">
+    <div>
+<app-side-nav [isMenuToggle]="isMenuToggle"></app-side-nav>
+</div>
+<div class="app-content">
+    <router-outlet></router-outlet>
+</div>
+</div>
