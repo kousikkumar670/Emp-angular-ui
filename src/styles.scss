@@ -1,0 +1,112 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+//$bv-orange: (
+//     50: #690fdf,
+//     100: #fff7f4,
+//     200: #fecdbd,
+//     300: #fc9977,
+//     400: #fc8259,
+//     500: #fb6c3b,
+//     600: #fa551d,
+//     700: #f44205,
+//     800: #d63a04,
+//     900: #b83204,
+//     A100: #ffffff,
+//     A200: #fff7f4,
+//     A400: #fc8259,
+//     A700: #f44205,
+//     contrast: (
+//         500: white,
+//         600: white,
+//         700: white,
+//         800: white,
+//         900: white,
+//         A700: white,
+//     )
+// );
+$angular-project-primary:mat.define-palette(mat.$teal-palette,800);
+$angular-project-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$angular-project-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angular-project-theme: mat.define-light-theme((
+  color: (
+    primary: $angular-project-primary,
+    accent: $angular-project-accent,
+    warn: $angular-project-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($angular-project-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.pos-rel{
+  position: relative
+}
+.pos-abs{
+  position:absolute;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.red{
+  color: red;
+}
+.login-style-card{
+top:150px;
+left: 40%;
+}
+.wid-25{
+  width: 25%;
+}
+.pad-5{
+padding:5px;
+}
+.pointer{
+  cursor: pointer;
+}
+.login-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.login-form-full-width {
+  width: 100%;
+}
+.pt-15{
+  padding-top:15px;
+}
+.wid-100-pr{
+  width: 100%;
+}
+.forgot-style{
+  position: relative;
+  top:-7px;
+  right: 0px
+}
+.login-icon-style{
+  font-size: 50px;
+  margin-right: 27px;
+  position: relative;
+  top:-4px
+}
